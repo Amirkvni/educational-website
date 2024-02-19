@@ -64,14 +64,21 @@ nav li:not(:last-child) a:hover {
   max-width: 1200px;
   margin: auto;
   gap: 5rem;
+  min-height: calc(100vh - 100px);
 }
 .right_content_header img {
   max-width: 300px;
+  border-radius: 10px;
 }
 .right_content_header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  place-content: center;
+  position: relative;
+}
+.right_content_header img:nth-child(2) {
+  transform: translateY(-70px);
 }
 .left-content-header {
   display: flex;
@@ -96,7 +103,7 @@ nav li:not(:last-child) a:hover {
   font-weight: 700;
 }
 .left-content-header p {
-  margin: 1rem 0;
+  margin: 1rem 0 1.5rem 0;
   color: #333333;
 }
 form {
@@ -121,4 +128,25 @@ button {
   padding: 1rem;
   box-shadow: 5px 5px 20px rgb(0, 0, 0, 0.2);
   white-space: nowrap;
+}
+.content_img_text {
+  background: linear-gradient(
+    to right,
+    rgba(92, 72, 238, 0.6),
+    rgba(15, 30, 106, 0.4)
+  );
+  backdrop-filter: blur(30px);
+  color: #fff;
+  padding: 1rem 2rem;
+  width: 100%;
+  max-width: 310px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-35%, -50%);
+  border-radius: 10px;
+}
+.content_img_text ul li {
+  list-style-type: circle;
+  margin-bottom: 0.5rem;
 }
