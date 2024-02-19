@@ -150,3 +150,21 @@ button {
   list-style-type: circle;
   margin-bottom: 0.5rem;
 }
+/* responsive : */
+@media screen and (max-width: 999px) {
+  .section_nav nav {
+    display: none;
+  }
+  .section_content_header {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .left-content-header {
+    text-align: center;
+  }
+  .left-content-header form {
+    justify-content: center;
+  }
+  .right-content-header img:nth-child(2) {
+    transform: translateY(0);
+  }
+}
